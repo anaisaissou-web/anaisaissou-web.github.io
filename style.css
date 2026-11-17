@@ -29,7 +29,7 @@ body {
   font-family: var(--sans);
   font-size: 17px;
   line-height: 1.6;
-  background: var(--peche) url(images/satin.jpg) center top / cover no-repeat fixed;
+  background: var(--peche) url(satin.jpg) center top / cover no-repeat fixed;
 }
 
 img { max-width: 100%; display: block; }
