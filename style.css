@@ -1,0 +1,213 @@
+/* =========================================================
+   Portfolio Anaïs Aissou · feuille de style commune
+   Palette : prune #633C48 · pêche #F2D8B8 · vieux rose #C99482 · olive #5A5740
+   ========================================================= */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+:root {
+  --prune: #633C48;
+  --prune-fonce: #4A2633;
+  --prune-doux: #5A3540;
+  --accent: #8A4E5C;
+  --peche: #F2D8B8;
+  --vieux-rose: #C99482;
+  --olive: #5A5740;
+  --serif: 'Bodoni Moda', Georgia, serif;
+  --sans: 'Work Sans', system-ui, sans-serif;
+  --verre: rgba(255, 249, 243, 0.32);
+  --verre-bord: rgba(255, 255, 255, 0.7);
+  --ombre: 0 30px 70px rgba(99, 60, 72, 0.22);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--prune-fonce);
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.6;
+  background: var(--peche) url(images/satin.jpg) center top / cover no-repeat fixed;
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+a:hover { opacity: .85; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+
+.conteneur { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
+.serif { font-family: var(--serif); }
+.italique { font-style: italic; color: var(--accent); }
+
+/* ---------- Verre dépoli ---------- */
+.verre {
+  background: var(--verre);
+  -webkit-backdrop-filter: blur(30px) saturate(160%);
+  backdrop-filter: blur(30px) saturate(160%);
+  border: 1px solid var(--verre-bord);
+  box-shadow: var(--ombre), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+.verre-olive {
+  background: rgba(90, 87, 64, 0.62);
+  -webkit-backdrop-filter: blur(34px) saturate(140%);
+  backdrop-filter: blur(34px) saturate(140%);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow: 0 40px 90px rgba(25, 8, 16, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.28);
+  color: var(--peche);
+}
+.verre-prune {
+  background: rgba(99, 60, 72, 0.7);
+  -webkit-backdrop-filter: blur(34px) saturate(150%);
+  backdrop-filter: blur(34px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 40px 90px rgba(99, 60, 72, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  color: var(--peche);
+}
+.pastille {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-size: 12px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase;
+  background: rgba(255, 249, 243, 0.4);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.75);
+}
+.etiquette { margin: 0; font-size: 12px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; color: var(--olive); }
+
+/* ---------- Boutons ---------- */
+.bouton {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 17px 32px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+}
+.bouton-plein { background: var(--prune); color: var(--peche); box-shadow: 0 14px 34px rgba(99, 60, 72, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.25); }
+.bouton-verre { background: rgba(255, 249, 243, 0.4); -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px); border-color: rgba(255, 255, 255, 0.75); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35); }
+.bouton-clair { background: var(--peche); color: var(--prune); box-shadow: 0 14px 34px rgba(40, 18, 26, 0.3); }
+.bouton-contour { background: rgba(255, 249, 243, 0.14); border-color: rgba(255, 255, 255, 0.4); color: var(--peche); }
+.boutons { display: flex; flex-wrap: wrap; gap: 16px; }
+
+/* ---------- En-tête ---------- */
+.entete { padding-top: 24px; }
+.entete .barre {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px;
+  padding: 14px 16px 14px 30px; border-radius: 999px;
+}
+.logo { text-decoration: none; font-family: var(--serif); font-size: 26px; font-style: italic; font-weight: 600; }
+.menu { display: flex; flex-wrap: wrap; align-items: center; gap: 26px; font-size: 13px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; }
+.menu a { text-decoration: none; }
+.menu .contact { background: var(--prune); color: var(--peche); padding: 13px 22px; border-radius: 999px; }
+
+/* ---------- Titres ---------- */
+h1, h2, h3 { font-family: var(--serif); font-weight: 400; margin: 0; }
+.titre-section { font-size: clamp(46px, 5.4vw, 80px); line-height: 1; }
+.texte-doux { color: var(--prune-doux); }
+
+/* ---------- Accueil ---------- */
+.hero { display: flex; flex-wrap: wrap; gap: 40px; align-items: stretch; padding-top: 56px; padding-bottom: 100px; }
+.hero-texte { flex: 999 1 560px; min-width: 0; padding: 56px; border-radius: 44px; display: flex; flex-direction: column; justify-content: center; gap: 30px; }
+.hero-texte .pastille { align-self: flex-start; }
+.hero h1 { font-size: clamp(60px, 8vw, 120px); line-height: 0.92; letter-spacing: -3px; }
+.hero-texte p.intro { margin: 0; max-width: 500px; font-size: 20px; }
+.hero-photo { flex: 1 1 380px; min-width: 0; display: flex; justify-content: center; align-items: center; }
+.cadre-arche { position: relative; width: 420px; max-width: 100%; padding: 14px; border-radius: 999px 999px 40px 40px; }
+.cadre-arche img { width: 100%; height: 600px; object-fit: cover; object-position: 50% 62%; border-radius: 999px 999px 28px 28px; }
+.carte-flottante { position: absolute; bottom: 34px; left: 34px; right: 34px; padding: 18px 22px; border-radius: 24px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.carte-flottante small { display: block; font-size: 11px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; color: var(--prune-doux); }
+.carte-flottante span { font-family: var(--serif); font-style: italic; font-size: 22px; line-height: 1.15; }
+
+.bandeau { padding: 22px 40px; border-radius: 999px; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 36px; font-family: var(--serif); font-style: italic; font-size: 26px; }
+.bandeau .etoile { color: var(--olive); }
+
+.section { padding-top: 110px; padding-bottom: 90px; }
+.entete-section { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 20px; padding: 0 8px; margin-bottom: 48px; }
+.entete-section p { margin: 0; max-width: 420px; }
+
+/* ---------- Cartes projets ---------- */
+.grille-projets { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 28px; }
+.carte-projet { padding: 16px 16px 30px; border-radius: 36px; display: flex; flex-direction: column; gap: 22px; text-decoration: none; transition: transform .25s ease; }
+.carte-projet:hover { transform: translateY(-6px); opacity: 1; }
+.visuel { position: relative; height: 340px; border-radius: 999px 999px 24px 24px; overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; padding: 24px; gap: 8px; box-shadow: 0 10px 30px rgba(25, 8, 16, 0.25); }
+.visuel img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.visuel .numero { position: relative; font-family: var(--serif); font-style: italic; font-size: 30px; line-height: 1; color: var(--prune-fonce); padding: 10px 22px; border-radius: 999px; background: rgba(255, 249, 243, 0.7); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); border: 1px solid rgba(255, 255, 255, 0.8); }
+.visuel.vide { background: var(--prune); color: var(--peche); box-shadow: inset 0 -40px 70px rgba(25, 8, 16, 0.25); }
+.visuel.vide .grand { font-family: var(--serif); font-style: italic; font-size: 64px; line-height: 1; }
+.visuel .statut { position: absolute; top: 110px; font-size: 12px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; padding: 9px 18px; border-radius: 999px; background: rgba(255, 249, 243, 0.85); color: var(--prune); }
+.carte-projet .infos { display: flex; flex-direction: column; gap: 8px; padding: 0 12px; }
+.carte-projet h3 { font-size: 32px; font-weight: 600; line-height: 1.1; }
+.carte-projet p { margin: 0; }
+
+/* ---------- Citation ---------- */
+.citation { padding: 100px 40px; border-radius: 48px; display: flex; flex-direction: column; align-items: center; gap: 24px; text-align: center; }
+.citation .guillemet { font-family: var(--serif); font-size: 120px; line-height: 0.6; color: var(--olive); }
+.citation p.phrase { margin: 0; max-width: 900px; font-family: var(--serif); font-style: italic; font-size: clamp(32px, 3.8vw, 54px); line-height: 1.2; }
+
+/* ---------- Journal ---------- */
+.journal { display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-start; }
+.journal .intro-journal { flex: 1 1 300px; min-width: 0; padding: 0 8px; }
+.liste-articles { flex: 999 1 560px; min-width: 0; padding: 12px 36px; border-radius: 36px; display: flex; flex-direction: column; }
+.article-ligne { text-decoration: none; display: flex; flex-wrap: wrap; align-items: baseline; gap: 12px 28px; padding: 26px 0; }
+.article-ligne + .article-ligne { border-top: 1px solid rgba(99, 60, 72, 0.18); }
+.article-ligne .categorie { width: 150px; font-size: 12px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--olive); }
+.article-ligne .titre { flex: 1 1 280px; font-family: var(--serif); font-size: 30px; }
+.article-ligne .bientot { font-size: 12px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--prune-doux); }
+
+/* ---------- À propos ---------- */
+.apropos { padding: 72px 56px; border-radius: 48px; display: flex; flex-wrap: wrap; gap: 56px; align-items: center; overflow: hidden; }
+.apropos .photo { flex: 1 1 260px; min-width: 0; display: flex; justify-content: center; }
+.apropos .photo img { width: 300px; height: auto; }
+.apropos .texte { flex: 999 1 480px; min-width: 0; display: flex; flex-direction: column; gap: 24px; }
+.apropos .etiquette { color: #F7D8C0; }
+.apropos h2 { font-size: clamp(34px, 3.6vw, 52px); line-height: 1.15; }
+.apropos h2 em { color: #F7CDBE; }
+.apropos p { margin: 0; font-size: 18px; color: #F2E3D6; }
+
+/* ---------- Pied de page ---------- */
+.pied { padding-top: 40px; padding-bottom: 48px; }
+.pied .boite { padding: 90px 56px 44px; border-radius: 48px; display: flex; flex-direction: column; gap: 44px; }
+.pied h2 { font-size: clamp(54px, 7.4vw, 112px); line-height: 0.95; letter-spacing: -2px; }
+.pied h2 em { color: #F7CDBE; }
+.pied .copyright { margin: 0; padding-top: 26px; border-top: 1px solid rgba(242, 216, 184, 0.25); font-size: 14px; color: #F2E3D6; }
+
+/* ---------- Pages projet ---------- */
+.fil-ariane { padding-top: 40px; font-size: 14px; }
+.fil-ariane a { text-decoration: none; font-weight: 600; }
+.entete-projet { margin-top: 24px; padding: 56px; border-radius: 44px; display: flex; flex-direction: column; gap: 22px; }
+.entete-projet h1 { font-size: clamp(48px, 6.6vw, 96px); line-height: 0.95; letter-spacing: -2px; }
+.entete-projet .chapo { margin: 0; max-width: 760px; font-size: 21px; }
+.fiche { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-top: 10px; }
+.fiche div { padding: 18px 22px; border-radius: 22px; }
+.fiche strong { display: block; font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--olive); }
+
+.bloc-image { margin-top: 40px; padding: 14px; border-radius: 36px; }
+.bloc-image img { width: 100%; border-radius: 26px; }
+.bloc-image figcaption { padding: 14px 10px 4px; font-size: 14px; color: var(--prune-doux); }
+
+.etapes { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 40px; }
+.etape { padding: 36px; border-radius: 32px; display: flex; flex-direction: column; gap: 12px; }
+.etape h2 { font-size: 34px; line-height: 1.1; }
+.etape p { margin: 0; }
+
+.video { position: relative; aspect-ratio: 16 / 9; border-radius: 26px; overflow: hidden; background: #1a1012; }
+.video iframe, .video video { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+/* ---------- Petits écrans ---------- */
+@media (max-width: 700px) {
+  body { background-attachment: scroll; background-size: 100% auto; background-repeat: repeat-y; }
+  .conteneur { padding: 0 16px; }
+  .hero { padding-bottom: 48px; }
+  .entete .barre { border-radius: 32px; padding: 16px 20px; }
+  .menu { gap: 16px; }
+  .hero-texte, .entete-projet { padding: 32px 26px; }
+  .cadre-arche img { height: 460px; }
+  .bandeau { border-radius: 32px; font-size: 21px; }
+  .citation { padding: 64px 24px; }
+  .liste-articles { padding: 8px 22px; }
+  .apropos { padding: 48px 26px; }
+  .pied .boite { padding: 56px 26px 32px; }
+}
